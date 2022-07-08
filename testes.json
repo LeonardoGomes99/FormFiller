@@ -1,0 +1,14 @@
+{
+    "fillForm": {
+        "url": [
+            "http://localhost/python/"            
+        ],
+        "components": [
+            {
+                "input": true,
+                "radio" : true,
+                "checkbox" : true
+            }
+        ]
+    }
+}
