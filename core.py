@@ -62,3 +62,6 @@ def submitForm():
 
 if __name__ == "__main__":
     main()
+
+# Pegar Elemento dentro de outro
+# driver.FindElements(By.Xpath("//div[@class='tabs']/button[.='Users']"));
