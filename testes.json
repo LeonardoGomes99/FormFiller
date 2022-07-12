@@ -7,7 +7,13 @@
             {
                 "input": true,
                 "radio" : true,
-                "checkbox" : true
+                "checkbox" : true,
+                "selectQnty" : true,
+                "select" : {
+                    "select-options-1" : "OPTION 3",
+                    "select-options-2" : "OPTION 4",
+                    "select-options-3" : "OPTION 1"
+                }
             }
         ]
     }

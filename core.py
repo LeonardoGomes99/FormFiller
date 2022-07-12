@@ -4,8 +4,7 @@ import random
 import time
 import json
 
-chromeDriverLocation = 'C:/Users/Leo/Documents/Python/chromedriver.exe'
-baseURL = 'https://betteranime.net/'
+chromeDriverLocation = 'chromedriver.exe'
 driver = webdriver.Chrome(chromeDriverLocation)
 
 def main():
@@ -26,8 +25,11 @@ def main():
                 checkRadios()
             if(b['checkbox'] > 0):
                 checkCheckbox()
+            if(b['selectQnty'] > 0):
+                for key, value in b['select'].items():
+                    checkSelect(key,value)
 
-            time.sleep(3)
+            time.sleep(8)
             submitForm()
 
 def generateString():
@@ -53,6 +55,11 @@ def checkCheckbox():
     checkboxes = driver.find_elements_by_xpath('//input[@type="checkbox"]')
     for checkbox in checkboxes:
         checkbox.click()
+
+def checkSelect(selectName, option):
+    print(selectName)
+    print(option)
+    driver.find_element_by_xpath("//select[@name='"+selectName+"']/option[text()='"+option+"']").click()
 
 def submitForm():
     buttonsSubmit = driver.find_elements_by_xpath('//button[@type="submit"]')
