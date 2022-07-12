@@ -30,6 +30,7 @@ def main():
                     checkSelect(key,value)
 
             time.sleep(8)
+            # driver.save_screenshot('screenshot.png')
             submitForm()
 
 def generateString():
